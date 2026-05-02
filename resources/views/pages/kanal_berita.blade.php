@@ -42,6 +42,7 @@
 <main class="py-20 bg-surface">
 <div class="max-w-7xl mx-auto px-8">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+    
 <!-- News Card 1 -->
 <article class="group flex flex-col bg-surface-container-low rounded-xl overflow-hidden scale-102-hover-lift transition-all duration-300">
 <div class="relative h-64 overflow-hidden">
@@ -63,8 +64,6 @@
 <span>12 Oct 2024</span>
 </div>
 <div class="flex items-center gap-2 text-stone-500 text-xs font-medium">
-<span class="material-symbols-outlined text-base">visibility</span>
-<span>1,248 views</span>
 </div>
 </div>
 </div>
