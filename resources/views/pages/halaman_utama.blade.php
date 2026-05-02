@@ -826,7 +826,33 @@
 </a>
 </div>
 <div class="news-grid">
-<!-- News Item 1 Card -->
+
+    @foreach ($beritas as $berita)
+<article class="news-card">
+    <div class="news-thumb">
+        <img 
+            src="{{ asset('storage/' . $berita->gambar) }}" 
+            alt="{{ $berita->judul }}"
+        >
+    </div>
+
+    <div class="news-info">
+        <span class="news-meta">
+            {{ $berita->kategori ?? 'Berita' }} • 
+            {{ \Carbon\Carbon::parse($berita->tanggal_dibuat)->translatedFormat('M Y') }}
+        </span>
+
+        <h3 class="news-heading">
+            {{ $berita->judul }}
+        </h3>
+
+        <p class="news-excerpt">
+            {{ Str::limit($berita->isi, 100) }}
+        </p>
+    </div>
+</article>
+@endforeach
+{{-- <!-- News Item 1 Card -->
 <article class="news-card">
 <div class="news-thumb">
 <img alt="Greenhouse tech" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4g681snBZH4iaD9dOyOtF3LJ2tDfTU1nCeMVWX0fW6-QC4DRJjiX3Cyo_eRXYdLJfzZG4k_-F6BlXWcaLSzjEDgqIFOHz10i3PxAX2lshBLidGVTzH6uSXZHWdtRIK2hI00gdO1gYDeFo4eSBRRfgNTNyYVS8GQHr7NaJo3CzA9uI1VP_qKUSfUMKsKRdCL5K0wfVX4MX388SiPpaKh49gXsqnf68Td79XXuQjJ1zDKYS0BM-E-pDuxVlz9uKBapFp0Cq1an9inPW"/>
@@ -858,7 +884,8 @@
 <h3 class="news-heading">Agri-Food Tech Expo: Menampilkan 20 Prototipe Mahasiswa</h3>
 <p class="news-excerpt">Pameran tahunan TRP tahun ini fokus pada automasi pasca panen dan pengolahan limbah organik menjadi kemasan biodegradable.</p>
 </div>
-</article>
+</article> --}}
+
 </div>
 </div>
 </section>

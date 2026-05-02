@@ -21,12 +21,18 @@ class BeritaForm
                     ->required(),
                 Textarea::make('isi')
                     ->columnSpanFull()
+                      ->rows(10)
+                    ->cols(20)
                     ->required(),
                 FileUpload::make('gambar')
-                    ->image()
-                    ->directory('berita')
-                    ->disk('public')
-                    ->nullable()
+                   ->label('Gambar')
+                   ->image()
+                   ->disk('public')
+                   ->directory('berita')
+                   ->visibility('public')
+                   ->preserveFilenames()
+                   ->openable()
+                   ->downloadable()
                     ->required(),
                 DatePicker::make('tanggal_dibuat')
                     ->default(now())

@@ -13,6 +13,6 @@ class Berita extends Model
         'isi',
         'gambar',
         'tanggal_dibuat',
-        'kategori_id',
+        'kategori',
     ];
 }

@@ -17,7 +17,9 @@ class BeritasTable
             ->columns([
                 TextColumn::make('judul')
                     ->searchable(),
-                ImageColumn::make('gambar'),
+                ImageColumn::make('gambar')
+                     ->disk('public')
+                     ->square(),
                 TextColumn::make('tanggal_dibuat')
                     ->date()
                     ->sortable(),
