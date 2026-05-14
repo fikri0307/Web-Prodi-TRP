@@ -23,29 +23,29 @@
 </div>
 </header>
 <!-- Navigation & Filter Section -->
-<section class="py-12 bg-surface-container-low">
+<section class="py-12 bg-surface-container-low" id="filter">
     <div class="max-w-7xl mx-auto px-8">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
 
             <div class="flex flex-wrap gap-3">
 
-                <a href="{{ url('/berita') }}"
+                <a href="{{ url('/berita#filter') }}"
                    class="{{ request('kategori') == '' ? 'px-6 py-2.5 rounded-full bg-primary text-white font-bold text-sm' : 'px-6 py-2.5 rounded-full bg-gray-200 text-black font-bold text-sm' }}">
                     Semua
                 </a>    
                  {{-- in_array(request('kategori'), ['Informasi Umum', 'akademik', 'kemahasiswaan'] --}}
                 {{-- 'px-6 py-2.5 rounded-full bg-primary text-white font-bold text-sm' : 'px-6 py-2.5 rounded-full bg-gray-200 text-black font-bold text-sm' --}}
-                <a href="{{ url('/berita?kategori=Informasi Umum') }}"
+                <a href="{{ url('/berita?kategori=Informasi Umum#filter') }}"
                    class="{{ request('kategori') == 'Informasi Umum' ? 'px-6 py-2.5 rounded-full bg-primary text-white font-bold text-sm' : 'px-6 py-2.5 rounded-full bg-gray-200 text-black font-bold text-sm' }}">
                     Informasi Umum
                 </a>
 
-                <a href="{{ url('/berita?kategori=Akademik') }}"
+                <a href="{{ url('/berita?kategori=Akademik#filter') }}"
                    class="{{ request('kategori') == 'Akademik' ? 'px-6 py-2.5 rounded-full bg-primary text-white font-bold text-sm' : 'px-6 py-2.5 rounded-full bg-gray-200 text-black font-bold text-sm' }}">
                     Akademik
                 </a>
 
-                <a href="{{ url('/berita?kategori=Kemahasiswaan') }}"
+                <a href="{{ url('/berita?kategori=Kemahasiswaan#filter') }}"
                    class="{{ request('kategori') == 'Kemahasiswaan' ? 'px-6 py-2.5 rounded-full bg-primary text-white font-bold text-sm' : 'px-6 py-2.5 rounded-full bg-gray-200 text-black font-bold text-sm' }}">
                     Kemahasiswaan
                 </a>
@@ -66,6 +66,7 @@
     
 <!-- News Card 1 -->
 @foreach ($beritas as $berita)
+<a href="{{ route('berita.detail', $berita->id) }}">    
 @php
     $kategoriColor = match($berita->kategori) {
         'Informasi umum' => 'bg-green-500 text-white',
@@ -102,6 +103,7 @@
 </div>
 </div>
 </article>
+</a>
 @endforeach
 
 </div>

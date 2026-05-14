@@ -11,8 +11,8 @@
 </div>
 <div class="nav-dropdown">
 <a href="/#visimisi">Visi Misi</a>
-<a href="#">Teknologi Benih</a>
-<a href="#">Mekanisasi Pertanian</a>
+<a href="/#keunggulan">Keunggulan Departemen</a>
+<a href="/#news">Kanal Berita</a>
 <a href="#">Agrobisnis</a>
 </div>
 </div>

@@ -760,7 +760,7 @@
 </div>
 </section>
 <!-- Keunggulan Section -->
-<section class="section-padding section-features">
+<section class="section-padding section-features" id="keunggulan">
 <div class="container">
 <div class="header-center">
 <h2>Keunggulan Departemen</h2>
@@ -814,7 +814,7 @@
 </div>
 </section>
 <!-- Berita Terkini Section -->
-<section class="section-padding section-news">
+<section class="section-padding section-news" id="news">
 <div class="container">
 <div class="news-header">
 <div>
@@ -828,6 +828,7 @@
 <div class="news-grid">
 
     @foreach ($beritas as $berita)
+<a href="{{ route('berita.detail', $berita->id) }}">
 <article class="news-card">
     <div class="news-thumb">
         <img 
@@ -851,40 +852,8 @@
         </p>
     </div>
 </article>
+</a>
 @endforeach
-{{-- <!-- News Item 1 Card -->
-<article class="news-card">
-<div class="news-thumb">
-<img alt="Greenhouse tech" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4g681snBZH4iaD9dOyOtF3LJ2tDfTU1nCeMVWX0fW6-QC4DRJjiX3Cyo_eRXYdLJfzZG4k_-F6BlXWcaLSzjEDgqIFOHz10i3PxAX2lshBLidGVTzH6uSXZHWdtRIK2hI00gdO1gYDeFo4eSBRRfgNTNyYVS8GQHr7NaJo3CzA9uI1VP_qKUSfUMKsKRdCL5K0wfVX4MX388SiPpaKh49gXsqnf68Td79XXuQjJ1zDKYS0BM-E-pDuxVlz9uKBapFp0Cq1an9inPW"/>
-</div>
-<div class="news-info">
-<span class="news-meta">Riset • Okt 2024</span>
-<h3 class="news-heading">Sistem Vertikal Farming Cerdas Berbasis Machine Learning</h3>
-<p class="news-excerpt">Mahasiswa TRP mengembangkan algoritma pengoptimalan nutrisi tanaman secara real-time untuk efisiensi air hingga 90%.</p>
-</div>
-</article>
-<!-- News Item 2 Card -->
-<article class="news-card">
-<div class="news-thumb">
-<img alt="Lab samples" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClhMY7RaYSxnPfwL-yK4F2M2coJeEkFC6LwTMY6L3B7TXGQTD-iCdjjmF9kntUgNdW07WzFL0VC3isWTjLNJ0dLiLTeRlRl0Z3hxiUfgmmkpLLP5Jc-4NrpgahVfxV8h5BSxO8kyjJGV4Lz1z5TKFWOUBgzXYWfjICtypWbTUcRQ8Qp7YrL3_dsMaAm9YOfKqZxqLr5P_XFehhL37-W6BiOrFVqhGgdfKYlXX3e9GiDfq4yOCTOp5_HdHG4lmYgR9Rs1AofpABituw"/>
-</div>
-<div class="news-info">
-<span class="news-meta">Prestasi • Sep 2024</span>
-<h3 class="news-heading">Hibah Kompetitif Nasional untuk Pengembangan Probiotik Organik</h3>
-<p class="news-excerpt">Tim Dosen TRP berhasil memenangkan pendanaan riset untuk komersialisasi produk minuman kesehatan berbasis fermentasi lokal.</p>
-</div>
-</article>
-<!-- News Item 3 Card -->
-<article class="news-card">
-<div class="news-thumb">
-<img alt="Industry expo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqSNeb5ysXmD_teFmnGIX6bCuGFLNpp-ygL-zo3G1zEnDw865h74FKSzb7LpW0CSkKhs9LnJsFjWb_-QC4DRJjiX3Cyo_eRXYdLJfzZG4k_-F6BlXWcaLSzjEDgqIFOHz10i3PxAX2lshBLidGVTzH6uSXZHWdtRIK2hI00gdO1gYDeFo4eSBRRfgNTNyYVS8GQHr7NaJo3CzA9uI1VP_qKUSfUMKsKRdCL5K0wfVX4MX388SiPpaKh49gXsqnf68Td79XXuQjJ1zDKYS0BM-E-pDuxVlz9uKBapFp0Cq1an9inPW"/>
-</div>
-<div class="news-info">
-<span class="news-meta">Event • Agu 2024</span>
-<h3 class="news-heading">Agri-Food Tech Expo: Menampilkan 20 Prototipe Mahasiswa</h3>
-<p class="news-excerpt">Pameran tahunan TRP tahun ini fokus pada automasi pasca panen dan pengolahan limbah organik menjadi kemasan biodegradable.</p>
-</div>
-</article> --}}
 
 </div>
 </div>

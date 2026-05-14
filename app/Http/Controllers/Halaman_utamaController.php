@@ -15,4 +15,11 @@ class Halaman_utamaController extends Controller
 
         return view('pages.halaman_utama', compact('beritas'));
     }
+    
+    public function detail($id)
+    {
+        $berita = Berita::findOrFail($id);
+
+        return view('pages.berita_detail', compact('berita'));
+    }   
 }

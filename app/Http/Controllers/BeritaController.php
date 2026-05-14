@@ -10,9 +10,10 @@ class BeritaController extends Controller
 {
     public function index(Request $request)
     {
+      
+    
         $beritas = Berita::all();
 
-        
     
         $query = Berita::query();
 
@@ -26,4 +27,18 @@ class BeritaController extends Controller
 
         return view('pages.kanal_berita', compact('beritas'));
     }
+
+     public function detail($id)
+    {
+        $berita = Berita::findOrFail($id);
+
+        $beritaTerbaru = Berita::where('id', '!=', $id)
+        ->latest('tanggal_dibuat')
+        ->take(3)
+        ->get();    
+
+
+        return view('pages.berita_detail', compact('berita', 'beritaTerbaru'));
+    }
+    
 }
