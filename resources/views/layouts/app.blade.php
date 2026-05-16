@@ -296,7 +296,7 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding: 4rem 3rem;
+        padding: 4rem 1rem;
         gap: 2rem;
         max-width: 1536px;  /* tambahkan ini */
         margin: 0 auto;  
@@ -326,7 +326,7 @@
     .footer-links {
         display: flex;
         flex-wrap: wrap;
-         flex-wrap: nowrap;   /* ubah wrap → nowrap */
+         /* ubah wrap → nowrap */
         justify-content: center;
          align-items: center; /* tambahkan ini */
         gap: 2rem;
@@ -341,7 +341,7 @@
     }
     .footer-bottom {
         border-top: 1px solid rgba(231, 229, 228, 0.5);
-        padding: 2rem 3rem;
+        padding: 2rem 1rem;
     }
     .footer-bottom-content {
         display: flex;

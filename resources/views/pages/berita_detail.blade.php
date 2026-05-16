@@ -61,6 +61,7 @@
 </div>
 </div>
 </header>
+
 <!-- Featured Image -->
 <div class="max-w-5xl mx-auto mb-16 px-4">
 <div class="relative aspect-video w-full overflow-hidden rounded-xl shadow-2xl">
@@ -91,9 +92,9 @@
 <div class="flex justify-between items-end mb-12">
 <div>
 <span class="text-primary font-bold text-sm uppercase tracking-widest block mb-2">Lanjut Membaca</span>
-<h2 class="font-headline text-4xl font-extrabold tracking-tight">Berita Terkait</h2>
+<h2 class="font-headline text-4xl font-extrabold tracking-tight">Berita lainnya</h2>
 </div>
-<a class="hidden md:flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all duration-300" href="#">
+<a class="hidden md:flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all duration-300" href="/berita">
                         Lihat Semua Berita <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
 </a>
 </div>

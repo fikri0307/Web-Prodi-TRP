@@ -1,8 +1,25 @@
 @extends('layouts.app')
 
 @section('title', 'TRP NEWS | Agricultural Food Engineering')
+@push('styles')
+<style>
+    @media (min-width: 768px) {
+            .footer-main {
+                flex-direction: row;
+                text-align: left;
+            }
+              .footer-bottom-content {
+                flex-direction: row;
+            }
+        }
+       
 
+</style>
+@endpush
 @section('content')
+
+
+
 
 <!-- Hero Section -->
 <header class="relative pt-0 h-[614px] flex items-center overflow-hidden">

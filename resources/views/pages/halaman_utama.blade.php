@@ -772,12 +772,12 @@
 <div class="flex-between">
 <div>
 <span class="material-symbols-outlined icon-lg">agriculture</span>
-<h3 class="card-title-lg">Rekayasa Pertanian Presisi</h3>
-<p class="card-text" style="max-width: 28rem;">Pemanfaatan data sensor dan otomasi untuk memaksimalkan hasil pangan organik dengan intervensi kimia minimal.</p>
+<h3 class="card-title-lg">Dosen Profesional & Berdedikasi</h3>
+<p class="card-text" style="max-width: 28rem;">Penerapan metode pembelajaran interaktif dan berbasis riset untuk mencetak lulusan unggul dengan kompetensi yang relevan di industri.</p>
 </div>
-<div class="learn-more">
-                        Pelajari Selengkapnya <span class="material-symbols-outlined">arrow_right_alt</span>
-</div>
+<a href="/dosen" class="learn-more">
+    Pelajari Profilnya <span class="material-symbols-outlined">arrow_right_alt</span>
+</a>
 </div>
 </div>
 <!-- Card 2 -->
