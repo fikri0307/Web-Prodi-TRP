@@ -17,6 +17,11 @@ use App\Models\Dataplp;
 Route::get('/', [Halaman_utamaController::class, 'index']); 
 Route::get('/berita', [BeritaController::class, 'index']);
 
+use App\Http\Controllers\FasilitasController;
+
+Route::get('/fasilitas', [FasilitasController::class, 'index'])->name('fasilitas');
+Route::get('/fasilitas/detail/{id}', [FasilitasController::class, 'show'])->name('fasilitas.detail');
+
 Route::get('/dosen', [DosenController::class, 'dosen'])
     ->name('dosen');
     

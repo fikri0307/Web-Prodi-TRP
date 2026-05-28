@@ -14,4 +14,12 @@ class Dosen extends Model
         'jabatan',
         'foto',
     ];
+
+    public function academicBackgrounds()
+    {
+        return $this->hasMany(AcademicBackground::class);
+    }
+//     protected $casts = [
+//     'nip' => 'integer',
+// ];
 }

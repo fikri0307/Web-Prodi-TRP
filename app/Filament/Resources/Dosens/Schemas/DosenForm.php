@@ -13,8 +13,12 @@ class DosenForm
         return $schema
             ->components([
                 TextInput::make('nip')
-                    ->numeric()
-                    ->default(0),
+                    ->required()
+                    ->maxLength(50)
+                    ->rule('regex:/^[0-9]+$/')
+                    ->validationMessages([
+                        'regex' => 'NIP hanya boleh berisi angka.',
+                        ]), 
                 TextInput::make('nama'),
                 TextInput::make('jabatan'),
                 FileUpload::make('foto')

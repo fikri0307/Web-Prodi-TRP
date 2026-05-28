@@ -23,7 +23,7 @@ class BeritaController extends Controller
         }
 
         // Sort terbaru
-        $beritas = $query->orderBy('tanggal_dibuat', 'desc')->get();
+        $beritas = $query->orderBy('tanggal_dibuat', 'desc')->paginate(9);
 
         return view('pages.kanal_berita', compact('beritas'));
     }

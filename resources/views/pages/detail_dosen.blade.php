@@ -4,9 +4,10 @@
 
 @push('styles')
 <style>
-     #mainNav {
+    #mainNav {
         background-color: #166a1f;
     }
+
     .page-body {
         background-color: var(--surface);
         color: var(--on-surface);
@@ -16,58 +17,79 @@
     }
 
     .page-container {
-        max-width: 1100px;
+        max-width: 1120px;
         margin: 0 auto;
-        margin-left: 170px;  /* ← Tambahkan ini, ubah nilai sesuai keinginan */
+        margin-left: 170px;
         margin-top: 3%;
         padding: 0 2rem;
     }
 
     main {
-        padding: 6rem 0 4rem;
+        padding: 5rem 0 4rem;
     }
 
-    .breadcrumb {
+    .detail-header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
         margin-bottom: 2rem;
+    }
+
+    .detail-title {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 2.4rem;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        margin: 0;
+    }
+
+    .detail-subtitle {
         color: var(--on-surface-variant);
         font-size: 0.95rem;
+        max-width: 760px;
+        margin: 0.5rem 0 0;
     }
 
-    .breadcrumb a {
-        color: inherit;
+    .back-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.8rem 1.2rem;
+        border-radius: 999px;
+        border: 1px solid rgba(22, 106, 31, 0.18);
+        background-color: rgba(22, 106, 31, 0.08);
+        color: var(--primary);
+        font-weight: 700;
         text-decoration: none;
+        transition: background-color 0.25s ease, transform 0.2s ease;
+    }
+
+    .back-button:hover {
+        background-color: rgba(22, 106, 31, 0.16);
+        transform: translateY(-1px);
     }
 
     .profile-grid {
         display: grid;
-        grid-template-columns: 300px 1fr;
-        gap: 3rem;
+        grid-template-columns: minmax(260px, 340px) 1fr;
+        gap: 2.5rem;
         align-items: start;
     }
 
-    @media (max-width: 768px) {
-        .profile-grid {
-            grid-template-columns: 1fr;
-            justify-items: center;
-            text-align: center;
-        }
-
-        .photo-wrapper {
-            width: 300px;
-        }
-    }
-
     .photo-wrapper {
-        width: 300px;
+        width: 100%;
     }
 
     .photo-container {
         width: 100%;
         aspect-ratio: 4 / 5;
-        border-radius: 0.75rem;
+        border-radius: 1.25rem;
         overflow: hidden;
         background-color: var(--surface-container-low);
-        box-shadow: 0 4px 30px rgba(27, 27, 27, 0.04);
+        box-shadow: 0 24px 60px rgba(27, 27, 27, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.06);
     }
 
     .photo-container img {
@@ -82,43 +104,92 @@
         filter: grayscale(0%);
     }
 
+    .profile-info {
+        padding: 2rem;
+        background-color: var(--surface-container-high);
+        border-radius: 1.25rem;
+        box-shadow: 0 26px 80px rgba(27, 27, 27, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
     .profile-info h1 {
         font-family: 'Plus Jakarta Sans', sans-serif;
         font-size: 3rem;
         font-weight: 800;
-        line-height: 1.1;
-        margin-bottom: 0.5rem;
-        letter-spacing: -0.02em;
+        line-height: 1.05;
+        margin: 0;
+        letter-spacing: -0.03em;
     }
 
     .job-title {
         font-family: 'Plus Jakarta Sans', sans-serif;
-        font-size: 1.5rem;
+        font-size: 1.35rem;
         color: var(--primary);
-        font-weight: 600;
+        font-weight: 700;
+        margin: 0.75rem 0 1.5rem;
+    }
+
+    .badge-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.65rem 1rem;
+        border-radius: 999px;
+        background-color: rgba(22, 106, 31, 0.12);
+        color: var(--primary);
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    .meta-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
         margin-bottom: 1rem;
     }
 
+    .meta-item {
+        padding: 1.5rem 1rem;
+        border-radius: 0.95rem;
+        background-color: var(--surface);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
     .metadata-label {
-        font-size: 0.75rem;
+        display: block;
+        font-size: 1.5rem;
         color: var(--outline);
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.1em;
-        display: block;
-        margin-bottom: 0.25rem;
+        margin-bottom: 0.35rem;
     }
 
     .metadata-value {
-        font-size: 1.125rem;
-        font-weight: 500;
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: var(--on-surface);
     }
 
-
     .academic-section {
-        margin-top: 1rem;
-        border-top: 1px solid var(--outline-variant);
-        padding-top: 0.1rem;
+        margin-top: 0;
+        padding: 1.4rem 1.4rem 1rem;
+        background-color: var(--surface);
+        border-radius: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .academic-section .section-title {
+        margin-bottom: 1.25rem;
     }
 
     .section-title {
@@ -126,31 +197,54 @@
         align-items: center;
         gap: 0.75rem;
         font-family: 'Plus Jakarta Sans', sans-serif;
-        font-size: 1.25rem;
+        font-size: 1.4rem;
         font-weight: 700;
-        margin-bottom: 1.5rem;
+        margin: 0 0 1.5rem;
     }
 
     .academic-list {
         list-style: none;
         padding: 0;
         margin: 0;
+        display: grid;
+        gap: 0.5rem;
     }
 
     .academic-item {
-        margin-bottom: 1.25rem;
+        padding: 0rem 2rem;
+        border-radius: 0.95rem;
+        background-color: var(--surface);
+        border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .degree {
         display: block;
         font-weight: 700;
         color: var(--on-surface);
+        font-size: 1rem;
+        margin-bottom: 0.35rem;
     }
 
     .institution {
         display: block;
         color: var(--on-surface-variant);
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+    }
+
+    .no-data {
+        color: var(--on-surface-variant);
+        font-size: 0.95rem;
+    }
+
+    @media (max-width: 900px) {
+        .page-container {
+            margin-left: 0;
+            padding: 0 1.25rem;
+        }
+
+        .profile-grid {
+            grid-template-columns: 1fr;
+        }
     }
 </style>
 @endpush
@@ -158,7 +252,13 @@
 @section('content')
 <main class="page-body">
     <div class="page-container">
-        
+        <header class="detail-header">
+            <div>
+                <h1 class="detail-title">Detail Dosen</h1>
+                
+            </div>
+            <a href="{{ route('dosen') }}" class="back-button">Kembali ke Daftar Dosen</a>
+        </header>
 
         <section class="profile-grid">
             <div class="photo-wrapper">
@@ -171,27 +271,37 @@
             </div>
 
             <div class="profile-info">
+                
+
                 <h1>{{ $dosen->nama }}</h1>
                 <p class="job-title">{{ $dosen->jabatan }}</p>
 
-                
+                <div class="meta-grid">
+                    <div class="meta-item">
+                        <span class="metadata-label">NIP</span>
+                        <span class="metadata-value">{{ $dosen->nip ?? '—' }}</span>
+                    </div>
 
-                <section class="academic-section">
-                    <h3 class="section-title">
-                        <span class="material-symbols-outlined">school</span>
-                        Academic Background
-                    </h3>
-                    <ul class="academic-list">
-                        <li class="academic-item">
-                            <span class="degree">Ph.D in Food Science</span>
-                            <span class="institution">University of Wageningen, Netherlands</span>
-                        </li>
-                        <li class="academic-item">
-                            <span class="degree">M.Sc in Biotechnology</span>
-                            <span class="institution">Institut Teknologi Bandung</span>
-                        </li>
-                    </ul>
-                </section>
+                    <section class="academic-section">
+                        <div class="section-title">
+                            <span class="material-symbols-outlined">school</span>
+                            Riwayat Akademik
+                        </div>
+
+                        <ul class="academic-list">
+                            @forelse($dosen->academicBackgrounds as $background)
+                                <li class="academic-item">
+                                    <span class="degree">{{ $background->degree }}</span>
+                                    <span class="institution">{{ $background->institution }}</span>
+                                </li>
+                            @empty
+                                <li class="academic-item no-data">
+                                    Belum ada data riwayat akademik untuk dosen ini.
+                                </li>
+                            @endforelse
+                        </ul>
+                    </section>
+                </div>
             </div>
         </section>
     </div>

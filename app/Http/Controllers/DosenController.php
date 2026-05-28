@@ -15,7 +15,7 @@ class DosenController extends Controller
     }
     public function detailDosen($id)
 {
-    $dosen = Dosen::findOrFail($id);
+    $dosen = Dosen::with('academicBackgrounds')->findOrFail($id);
 
     return view('pages.detail_dosen', compact('dosen'));
 }

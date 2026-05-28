@@ -16,7 +16,7 @@ class DosensTable
         return $table
             ->columns([
                 TextColumn::make('nip')
-                    ->numeric()
+                
                     ->sortable(),
                 TextColumn::make('nama')
                     ->searchable(),

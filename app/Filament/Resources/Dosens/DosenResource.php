@@ -5,6 +5,7 @@ namespace App\Filament\Resources\Dosens;
 use App\Filament\Resources\Dosens\Pages\CreateDosen;
 use App\Filament\Resources\Dosens\Pages\EditDosen;
 use App\Filament\Resources\Dosens\Pages\ListDosens;
+use App\Filament\Resources\Dosens\RelationManagers\AcademicBackgroundsRelationManager;
 use App\Filament\Resources\Dosens\Schemas\DosenForm;
 use App\Filament\Resources\Dosens\Tables\DosensTable;
 use App\Models\Dosen;
@@ -36,7 +37,7 @@ class DosenResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            AcademicBackgroundsRelationManager::class,
         ];
     }
 

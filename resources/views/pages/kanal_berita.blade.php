@@ -125,12 +125,8 @@
 
 </div>
 <!-- Pagination -->
-<div class="mt-20 flex justify-center gap-2">
-<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-on-primary font-bold">1</button>
-<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface-variant font-bold hover:bg-secondary-container transition-colors">2</button>
-<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface-variant font-bold hover:bg-secondary-container transition-colors">3</button>
-<span class="w-10 h-10 flex items-center justify-center text-stone-400">...</span>
-<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface-variant font-bold hover:bg-secondary-container transition-colors">12</button>
+<div class="mt-20">
+    {{ $beritas->appends(request()->query())->links() }}
 </div>
 </div>
 </main>
