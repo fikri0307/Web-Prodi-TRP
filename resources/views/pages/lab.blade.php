@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Fasilitas & Laboratorium | Prodi Teknologi Rekayasa Pangan')
+@section('title', 'Fasilitas & Laboratorium | Teknologi Rekayasa Pangan')
 
 @push('styles')
 <style>

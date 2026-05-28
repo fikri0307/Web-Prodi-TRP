@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'TRP NEWS | Agricultural Food Engineering')
+@section('title', 'TRP NEWS | Teknologi Rekayasa Pangan')
 @push('styles')
 <style>
     @media (min-width: 768px) {

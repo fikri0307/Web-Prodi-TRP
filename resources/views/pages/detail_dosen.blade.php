@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Detail Dosen | Agricultural Food Engineering')
+@section('title', 'Detail Dosen | Teknologi Rekayasa Pangan')
 
 @push('styles')
 <style>

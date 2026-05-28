@@ -1,7 +1,7 @@
 
 @extends('layouts.app')
 
-@section('title', 'TRP NEWS | Agricultural Food Engineering')
+@section('title', 'TRP NEWS | Teknologi Rekayasa Pangan')
 
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -76,9 +76,9 @@
 <!-- Content Canvas -->
 <div class="content-canvas" id="contentCanvas">    
 <div class="prose prose-lg prose-stone max-w-none font-body text-on-surface leading-relaxed space-y-8">
-<p class="text-xl font-medium text-on-surface-variant leading-relaxed first-letter:text-6xl first-letter:font-bold first-letter:text-primary first-letter:mr-3 first-letter:float-left">
+<div class="text-xl font-medium text-on-surface-variant leading-relaxed [&>p:first-child]:first-letter:text-6xl [&>p:first-child]:first-letter:font-bold [&>p:first-child]:first-letter:text-primary [&>p:first-child]:first-letter:mr-3 [&>p:first-child]:first-letter:float-left [&_blockquote]:border-l-4 [&_blockquote]:border-primary [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-on-surface-variant [&_blockquote]:bg-surface-container-low [&_blockquote]:py-4 [&_blockquote]:pr-4 [&_blockquote]:my-6 [&_blockquote]:rounded-r-lg">
                          {!! $berita->isi !!}
-                    </p>
+</div>
 
 </div>
 <!-- Tags & Social -->

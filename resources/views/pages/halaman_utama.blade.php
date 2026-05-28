@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Beranda | AgroEngineering Polytechnic')
+@section('title', 'Beranda | Teknologi Rekayasa Pangan')
 
 @push('styles')
 <style>
@@ -689,18 +689,17 @@
                 Menggabungkan rekayasa bioproses dengan keberlanjutan pertanian untuk menghasilkan sistem produksi pangan yang lebih cerdas dan bernilai tinggi.
             </p>
 <div class="hero-btns">
-<button class="btn-primary">Jelajahi Program</button>
-<button class="btn-secondary" style="margin-left: 1rem;">Lihat Riset Kami</button>
+<button class="btn-primary" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });">Jelajahi Program</button>
 </div>
 </div>
 </div>
 </header>
 <!-- Tentang Kami Section -->
-<section class="section-padding section-about">
-<div class="container about-grid">
+<section class="section-padding section-about"id="about">
+<div class="container about-grid ">
 <div class="about-left">
 <h2 class="section-title">
-<span class="title-line"></span> Tentang Kami
+<span class="title-line "></span> Tentang Kami
             </h2>
 <p class="section-subtitle">Bridging Nature and Tech</p>
 </div>
@@ -802,11 +801,11 @@
 <img alt="Greenhouse" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQBST7d6ggQuTYviB0ktcM2I-FOKkmM1fsf_hJDSNJxBd9P73Y8zjn_7qru-SuvBhaDe8CzVXg9Ef0qTtAhCRcYPFfyczdxsKCgg_hW7wbXsKOVkxCMhzUDyLCci-YlZqtSi8lYt5F8xoHbx8cCKpTNHTcjs5BrSinvYB5V6Qa-8tyEmXZTxL36n_od4W5i_-0hwMMhESjI40K1WXWXhRIvpAd6UXA2nzElRN2dsYM-eGiY2JijgBP3KQvFpgy95sPCAwRbf_oRVcI"/>
 </div>
 <div class="card-content-side">
-<h3 class="card-title-white" style="color: var(--emerald-900);">Kolaborasi Global Green-Tech</h3>
-<p class="card-text" style="font-size: 0.875rem;">Bekerja sama dengan institusi teknologi terkemuka di Belanda dan Jepang untuk riset bio-pangan masa depan.</p>
-<div class="learn-more">
-                            Program Internasional <span class="material-symbols-outlined">arrow_forward</span>
-</div>
+<h3 class="card-title-white" style="color: var(--emerald-900);">Ekosistem Laboratorium Modern</h3>
+<p class="card-text" style="font-size: 0.875rem;">Didukung fasilitas riset mutakhir berstandar internasional dan instrumen teknologi terkini untuk mendukung inovasi bio-pangan.</p>
+<a href="/fasilitas" class="learn-more">
+                            laboratorium dan fasilitas <span class="material-symbols-outlined">arrow_forward</span>
+</a>
 </div>
 </div>
 </div>

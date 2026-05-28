@@ -5,7 +5,7 @@ namespace App\Filament\Resources\Beritas\Schemas;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\FileUpload;
 use Filament\Schemas\Schema;
 
@@ -19,10 +19,8 @@ class BeritaForm
                     ->required()
                     ->default('0')
                     ->required(),
-                Textarea::make('isi')
+                RichEditor::make('isi')
                     ->columnSpanFull()
-                      ->rows(10)
-                    ->cols(20)
                     ->required(),
                 FileUpload::make('gambar')
                    ->label('Gambar')

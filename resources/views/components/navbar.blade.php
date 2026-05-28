@@ -2,7 +2,7 @@
 
 <nav id="mainNav">
 <div class="nav-container">
-<a class="nav-logo" href="#">Teknologi Rekayasa Pangan</a>
+<a class="nav-logo" href="/">Teknologi Rekayasa Pangan</a>
 <div class="nav-links-wrap" id="navLinks">
 <div class="nav-item-wrap">
 <a class="nav-item-link" href="/">Beranda</a>
@@ -24,16 +24,16 @@
         <div class="nav-dropdown">
             <a href="/dosen">Daftar Dosen</a>
             <a href="/dataplp">Daftar plp & Admin</a>
-            <a href="{{ route('fasilitas') }}">Fasilitas</a>
+            
         </div>
 </div>
 
 
-<div class="nav-item-wrap">
+<!-- <div class="nav-item-wrap">
 <a class="nav-item-link" href="#">Admissions</a>
-</div>
+</div> -->
 <div class="nav-item-wrap">
-<a class="nav-item-link" href="#">Laboratories</a>
+<a class="nav-item-link" href="{{ route('fasilitas') }}">Fasilitas</a>
 </div>
 </div>
 <button class="nav-mobile-toggle" id="menuToggle">
