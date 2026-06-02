@@ -10,6 +10,8 @@ class CreateDosen extends CreateRecord
     protected static string $resource = DosenResource::class;
     protected function getRedirectUrl(): string
     {
-        return $this->getResource()::getUrl('index');
+        return static::getResource()::getUrl('edit', [
+        'record' => $this->record,
+    ]);
     }
 }
