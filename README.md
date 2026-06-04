@@ -1,59 +1,119 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Web Program Studi (Prodi) - Teknologi Rekayasa Perangkat Lunak (TRP)
+
+Selamat datang di repositori web Program Studi Teknologi Rekayasa Perangkat Lunak. Aplikasi ini dikembangkan menggunakan framework **Laravel**. 
+
+Aplikasi ini berfungsi untuk mengelola dan menampilkan informasi mengenai program studi, berita dan informasi, profil dosen, data PLP, serta fasilitas laboratorium yang ada di program studi.
+
+---
+
+## 🚀 Fitur Utama
+- **Profil Prodi**: Menampilkan visi, misi, dan informasi umum.
+- **Berita & Informasi**: Manajemen dan publikasi berita terbaru untuk mahasiswa dan publik.
+- **Data Dosen & PLP**: Informasi detail mengenai staf akademik, background pendidikan, dan posisinya.
+- **Fasilitas & Laboratorium**: Detail fasilitas lab beserta kapasitas dan operasionalnya.
+- **Admin Panel**: Menggunakan Filament (jika tersedia) untuk kemudahan manajemen konten.
+
+---
+
+## 🛠️ Prasyarat (Prerequisites)
+
+Sebelum menjalankan aplikasi ini, pastikan sistem Anda memiliki hal-hal berikut:
+- **PHP** (Minimal versi 8.2 atau yang disyaratkan oleh Laravel 11+)
+- **Composer** (Untuk mengelola dependensi PHP)
+- **Node.js & npm** (Untuk mengelola asset frontend/TailwindCSS)
+- **MySQL** atau database MariaDB/PostgreSQL yang didukung
+- **Git** (Opsional, untuk clone repositori)
+
+---
+
+## ⚙️ Panduan Setup & Instalasi (Setup Guide)
+
+Ikuti langkah-langkah di bawah ini untuk menjalankan proyek ini di perangkat lokal (local environment):
+
+### 1. Clone Repositori
+```bash
+git clone https://github.com/fikri0307/Web-Prodi-TRP.git
+cd Web-Prodi-TRP
+```
+
+### 2. Install Dependensi PHP
+Jalankan Composer untuk mengunduh semua paket yang dibutuhkan oleh Laravel:
+```bash
+composer install
+```
+
+### 3. Install Dependensi Frontend (NPM)
+Untuk memproses asset seperti Tailwind CSS:
+```bash
+npm install
+```
+
+### 4. Setup File Environment
+Salin file konfigurasi bawaan ke `.env`:
+```bash
+cp .env.example .env
+```
+*(Pengguna Windows bisa menggunakan `copy .env.example .env` atau copy-paste manual)*
+
+Setelah itu, **buka file `.env`** dan atur konfigurasi database Anda:
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nama_database_anda
+DB_USERNAME=root
+DB_PASSWORD=password_database_anda
+```
+
+### 5. Generate Application Key
+Jalankan perintah ini agar aplikasi dapat mengenkripsi sesi dan data lainnya dengan aman:
+```bash
+php artisan key:generate
+```
+
+### 6. Migrasi & Seed Database
+Aplikasi ini sudah dilengkapi dengan seeder untuk memudahkan setup awal data (Dosen, PLP, Berita, Fasilitas).
+Jalankan perintah berikut untuk merender tabel dan mengisi data awal:
+```bash
+php artisan migrate:fresh --seed
+```
+
+### 7. Buat Symbolic Link (Storage)
+Untuk memastikan gambar/foto (dari fasilitas, dosen, dll) yang diunggah dapat diakses dari browser, jalankan:
+```bash
+php artisan storage:link
+```
+
+---
+
+## ▶️ Menjalankan Aplikasi
+
+Anda membutuhkan 2 terminal terpisah untuk menjalankan aplikasi dengan sempurna:
+
+**Terminal 1:** (Untuk menjalankan server PHP)
+```bash
+php artisan serve
+```
+Aplikasi akan dapat diakses di: [http://localhost:8000](http://localhost:8000)
+
+**Terminal 2:** (Untuk melakukan *build* atau *hot-reload* asset frontend TailwindCSS)
+```bash
+npm run dev
+```
+
+---
+
+## 🤝 Kontribusi
+
+Jika Anda ingin berkontribusi pada repositori ini:
+1. **Fork** repositori ini
+2. Buat branch fitur baru (`git checkout -b fitur-baru`)
+3. **Commit** perubahan Anda (`git commit -m 'Menambahkan fitur baru'`)
+4. **Push** ke branch Anda (`git push origin fitur-baru`)
+5. Buat **Pull Request**
+
+---
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  Dibuat dengan ❤️ untuk Program Studi Teknologi Rekayasa Perangkat Lunak
 </p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
