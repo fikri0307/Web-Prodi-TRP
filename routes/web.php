@@ -35,3 +35,7 @@ Route::get('/berita/{id}', [Halaman_utamaController::class, 'detail'])
     ->name('berita.detail');
 Route::get('/berita/{id}', [BeritaController::class, 'detail'])
     ->name('berita.detail');
+
+use App\Http\Controllers\GaleriController;
+
+Route::get('/galeri', [GaleriController::class, 'index'])->name('galeri');

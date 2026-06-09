@@ -302,8 +302,8 @@
         margin: 0 auto;  
     }
     @media (min-width: 768px) {
-        .footer-main { flex-direction: row; text-align: left; align-items: flex-start;}
-        
+        .footer-main { flex-direction: row; text-align: left; align-items: center; justify-content: flex-start; }
+        .footer-links { margin-left: auto; }
     }
     .footer-brand {
     max-width: 20rem;    /* tambahkan ini */

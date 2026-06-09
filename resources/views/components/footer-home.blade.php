@@ -7,11 +7,10 @@
             </p>
 </div>
 <div class="footer-links">
-<a href="#">Privacy Policy</a>
-<a href="#">Research Ethics</a>
-<a href="#">Campus Safety</a>
-<a href="#">Contact Us</a>
-<a href="#">Alumni Portal</a>
+<a href="/dosen">Daftar Dosen</a>
+<a href="/dataplp">Daftar PLP</a>
+<a href="{{ route('fasilitas') }}">Fasilitas</a>
+<a href="/#news">Kanal Berita</a>
 </div>
 <div class="footer-social" style="display: flex; gap: 1rem;">
 <span class="material-symbols-outlined" style="color: var(--emerald-800); cursor: pointer;">language</span>

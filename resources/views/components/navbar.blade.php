@@ -24,7 +24,7 @@
         <div class="nav-dropdown">
             <a href="/dosen">Daftar Dosen</a>
             <a href="/dataplp">Daftar plp & Admin</a>
-            
+            <a href="{{ route('galeri') }}">Galeri</a>
         </div>
 </div>
 
