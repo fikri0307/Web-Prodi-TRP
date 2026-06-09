@@ -681,7 +681,7 @@
 <div class="hero-overlay-gradient"></div>
 <div class="container hero-content-container">
 <div class="hero-text-box">
-<span class="badge">Agriculture 4.0 &amp; Engineering</span>
+
 <h1 class="hero-title">
                 Masa Depan Pangan: <span>Presisi, Organik, Inovatif</span>
 </h1>
