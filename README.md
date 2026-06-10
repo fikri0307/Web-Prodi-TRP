@@ -1,6 +1,6 @@
-# Web Program Studi (Prodi) - Teknologi Rekayasa Perangkat Lunak (TRP)
+# Web Program Studi (Prodi) - Teknologi Rekayasa Pangan (TRP)
 
-Selamat datang di repositori web Program Studi Teknologi Rekayasa Perangkat Lunak. Aplikasi ini dikembangkan menggunakan framework **Laravel**. 
+Selamat datang di repositori web Program Studi Teknologi Rekayasa Pangan Lunak. Aplikasi ini dikembangkan menggunakan framework **Laravel**. 
 
 Aplikasi ini berfungsi untuk mengelola dan menampilkan informasi mengenai program studi, berita dan informasi, profil dosen, data PLP, serta fasilitas laboratorium yang ada di program studi.
 
@@ -115,5 +115,5 @@ Jika Anda ingin berkontribusi pada repositori ini:
 ---
 
 <p align="center">
-  Dibuat dengan ❤️ untuk Program Studi Teknologi Rekayasa Perangkat Lunak
+  Dibuat untuk Program Studi Teknologi Rekayasa pangan
 </p>
