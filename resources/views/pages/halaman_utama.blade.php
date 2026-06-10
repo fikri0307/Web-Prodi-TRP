@@ -185,7 +185,7 @@
         }
 
         .section-about {
-            background-color: #d9ffd9;
+            background-color: #ffffffff;
         }
 
         .section-vision {

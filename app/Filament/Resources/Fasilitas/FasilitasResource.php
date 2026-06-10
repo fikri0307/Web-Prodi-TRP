@@ -18,7 +18,7 @@ class FasilitasResource extends Resource
 {
     protected static ?string $model = Fasilitas::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedBuildingOffice2;
 
     protected static ?string $navigationLabel = 'Fasilitas';
     protected static ?string $modelLabel = 'Fasilitas';

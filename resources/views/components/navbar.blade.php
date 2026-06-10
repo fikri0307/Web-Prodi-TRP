@@ -14,7 +14,7 @@
 <div class="nav-dropdown">
 <a href="/#visimisi">Visi Misi</a>
 <a href="/#keunggulan">Keunggulan Departemen</a>
-<a href="/#news">Kanal Berita</a>
+<a href="/berita">Kanal Berita</a>
 </div>
 </div>
 <div class="nav-item-wrap">

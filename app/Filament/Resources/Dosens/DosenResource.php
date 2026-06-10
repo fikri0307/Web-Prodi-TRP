@@ -20,7 +20,7 @@ class DosenResource extends Resource
     protected static ?string $navigationLabel = 'Dosen';
     protected static ?string $model = Dosen::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedAcademicCap;
 
     protected static ?string $recordTitleAttribute = 'nama';
 

@@ -19,7 +19,7 @@ class GaleriResource extends Resource
     protected static ?string $navigationLabel = 'Galeri';
     protected static ?string $model = Galeri::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedPhoto;
 
     protected static ?string $recordTitleAttribute = 'judul';
 

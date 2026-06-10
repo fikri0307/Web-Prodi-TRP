@@ -91,17 +91,11 @@
         box-shadow: 0 24px 60px rgba(27, 27, 27, 0.08);
         border: 1px solid rgba(255, 255, 255, 0.06);
     }
-
     .photo-container img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        filter: grayscale(100%);
         transition: filter 0.5s ease;
-    }
-
-    .photo-container:hover img {
-        filter: grayscale(0%);
     }
 
     .profile-info {

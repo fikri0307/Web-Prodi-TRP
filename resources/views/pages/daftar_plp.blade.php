@@ -32,7 +32,7 @@
         @foreach ($dataplp as $data)
         <div class="group relative bg-surface-container-low rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
             <div class="aspect-[4/5] overflow-hidden">
-                <img  alt="{{ $data->nama }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"  src="{{ asset('storage/' . $data->foto) }}"/>
+                <img  alt="{{ $data->nama }}" class="w-full h-full object-cover transition-all duration-700"  src="{{ asset('storage/' . $data->foto) }}"/>
             </div>
             <div class="p-6">
                 <p class="text-tertiary font-bold text-[10px] tracking-widest uppercase mb-2">{{ $data->jabatan }}</p>
@@ -48,15 +48,6 @@
      
     </div>
 
-    <!-- Contact CTA Section -->
-    <div class="mt-24 p-12 bg-surface-container-highest rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8">
-        <div class="max-w-xl text-center md:text-left">
-            <h2 class="text-2xl font-bold text-on-surface mb-2">Tertarik melakukan riset bersama?</h2>
-            <p class="text-on-surface-variant">Hubungi departemen kami untuk kolaborasi akademik, penelitian, atau informasi program studi lebih lanjut.</p>
-        </div>
-        <button class="bg-primary text-on-primary px-8 py-3 rounded-xl font-bold hover:bg-primary-container transition-colors shadow-lg">
-            Hubungi Kami
-        </button>
-    </div>
+
 </main>
 @endsection

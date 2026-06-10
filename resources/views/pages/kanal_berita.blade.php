@@ -29,12 +29,12 @@
 </div>
 <div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
 <div class="max-w-2xl">
-<span class="inline-block py-1 px-3 bg-tertiary-fixed text-on-tertiary-fixed font-label text-xs tracking-widest font-bold rounded-full mb-6 uppercase">Scientific Arboretum</span>
+
 <h1 class="text-display font-display text-6xl md:text-8xl font-extrabold text-white leading-tight tracking-tighter mb-4">
                 TRP NEWS
             </h1>
 <p class="text-white/90 text-lg md:text-xl font-medium max-w-lg leading-relaxed">
-                Advancing food security through precision engineering and biological innovation.
+                Memajukan ketahanan pangan melalui rekayasa presisi dan inovasi biologis.
             </p>
 </div>
 </div>
